@@ -9,7 +9,12 @@ public class questaoCinco {
         String input = scanner.nextLine();
         scanner.close();
 
-        String reverso = new StringBuilder(input).reverse().toString();
-        System.out.println("String invertida: " + reverso);
+        StringBuilder reverso = new StringBuilder();
+
+        for (int i = input.length() - 1; i >= 0; i--) {
+            reverso.append(input.charAt(i));
+        }
+
+        System.out.println("String invertida: " + reverso.toString());
     }
 }
